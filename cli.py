@@ -17,7 +17,7 @@ def input_error(func):
 
 @input_error
 def add(raw_user_input):
-    global contacts_book
+    
     name = raw_user_input[1].capitalize()
     number = raw_user_input[2]
     contacts_book[name] = number
@@ -26,7 +26,7 @@ def add(raw_user_input):
 
 @input_error
 def change(raw_user_input):
-    global contacts_book
+    
     name = raw_user_input[1].title()
     number = raw_user_input[2]
     old_number = contacts_book[name]
@@ -38,7 +38,7 @@ def change(raw_user_input):
 
 @input_error
 def get_number(raw_user_input):
-    global contacts_book
+    
     name = raw_user_input[1].title()
     number = contacts_book[name]
     msg = f"The contact with name {name} contain number {number}"
@@ -46,7 +46,7 @@ def get_number(raw_user_input):
 
 
 def show_all(*_):
-    global contacts_book
+    
     if contacts_book:
 
         msg = ["-" * 40, "{:^20} | {:^17}".format("NAME", "TELEPHONE NUMBER"), "-" * 40]
